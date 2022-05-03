@@ -18,6 +18,6 @@ x = 0;
 for j = 1: length(E) -1
     x = x + (((h.Values(j) - expected(j))^2)/expected(j));
 end
-
+x
 
 

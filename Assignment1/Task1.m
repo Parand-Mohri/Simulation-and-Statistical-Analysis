@@ -1,23 +1,27 @@
-% boxplot(task1_data)
-x = zeros(1, length(task1_data));
-scatter(task1_data, x)
-a = 0.05;
+boxplot(task1_data)
+% x = zeros(1, length(task1_data));
+% scatter(task1_data, x)
+% a = 0.05;
 n = length(task1_data);
 % h = histogram(task1_data,50);
-[Y, E] = discretize(task1_data , 50);
-% %data is normal with M mean and V variance 
-M = mean(task1_data);
-st = std(task1_data); 
-% % p = normcdf(,M,st);
-% 
-% expected = zeros(1,length(h.Values));
-% for i=1: length(E)-1
-%      expected(i) = (normcdf(E(i+1),M,st) - normcdf(E(i),M,st)) * n;
-% end
-% x = 0;
-% for j = 1: length(E) -1
-%     x = x + (((h.Values(j) - expected(j))^2)/expected(j));
-% end
-% 
-% 
-% 
+% [Y, E] = discretize(task1_data , 50);
+% x =[-3:.01:3];
+% pd = makedist('Lognormal');
+% y = pdf(pd,x);
+% plot(x,y)
+M = mean(task2_data);
+st = std(task2_data);
+%  Min = min(task1_data)
+%  Max = max(task1_data)
+
+% seven number summary 
+
+
+
+x = [-100:.01:100];
+% lognstat
+% y = lognpdf( x , lognstat(0) , lognstat(1) );
+y = normpdf( x , exp(M +(st/2)) , st);
+plot(x,y)
+
+    
