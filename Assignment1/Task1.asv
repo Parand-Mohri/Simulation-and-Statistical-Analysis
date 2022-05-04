@@ -1,5 +1,6 @@
 
-load('dataIndSSA2022.mat')
+
+
 %% Task 1
 % visualization
 figure;
@@ -49,37 +50,7 @@ end
 
 
 
-%% Task 3
-a2 = 63308;
-a3 = -183326;
-b1 = 86098;
-b2 = 0;
-b3 = -539608;
-m1 = 2147483647;
-m2 = 2145483479;
-
-x(1) = 0;
-x(2) = 63308;
-x(3) = -183326;
-y(1) = 86098;
-y(2) = 0;
-y(3) = -539608;
-
-x = zeros(1, 10000);
-y = zeros(1, 10000);
-
-for n = 4:10000    
-    x(n) = mod((a1 * x(n-1)) + (a2 * x(n-2)) + (a3 * x(n-3)), m1);
-    y(n) = mod((b1 * y(n-1)) + (b2 * y(n-2)) + (b3 * y(n-3)), m2);
-    
-    z(n) = mod((x(n) - y(n)), m1);
-    
-end
-
-
-
-
-
+%% Task
 % [Y, E] = discretize(task1_data , 50);
 % x =[-3:.01:3];
 % pd = makedist('Lognormal');

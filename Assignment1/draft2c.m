@@ -8,6 +8,9 @@ mean =  0.9989;
 x = 0:0.01:110;
 
 h = histogram(task2_sorted, 'Normalization','pdf', 'BinEdges', x);
+
+
+
 % hold on
 % pdf = exp(-(log(x)- mu).^2 ./ (2 * sigma.^2)) ./ (x * sigma * sqrt(2 * pi));
 % plot(x, pdf, 'LineWidth', 1.5);

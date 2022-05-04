@@ -157,3 +157,11 @@ function y = fiveOfKind(x)
         y = false;
     end
 end
+
+
+%alldif, 1pair, 2pairs, 3ofakind, 4ofakind, 5ofakind 
+function n = getPattern(x)
+    r = unique(x)
+    if length(r)==5
+        n = 1
+    else len
